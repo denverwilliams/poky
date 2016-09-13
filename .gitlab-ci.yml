@@ -15,7 +15,7 @@ build:
 build_yocto:
   stage: deploy
   tags:
-    - build
+    - yocto
   script:
     - docker pull docker.ii.org.nz/iichip/poky/:$CI_BUILD_REF_NAME
     - docker rm -f docker.ii.org.nz/iichip/poky/:$CI_BUILD_REF_NAME || /bin/true
