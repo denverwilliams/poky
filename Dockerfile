@@ -11,11 +11,8 @@ RUN id build 2>/dev/null || useradd --uid 30000 --create-home build
 RUN echo "build ALL=(ALL) NOPASSWD: ALL" | tee -a /etc/sudoers
 
 USER build
-WORKDIR /home/build
-RUN git clone --branch chip-fido https://gitlab.ii.org.nz/iichip/poky.git
-
-WORKDIR /home/build/poky
+ADD build.sh /home/build
 
 RUN chmod +x build.sh
 
-ENTRYPOINT ["/home/build/poky/build.sh"]
+ENTRYPOINT ["/home/build/build.sh"]
