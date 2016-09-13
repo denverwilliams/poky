@@ -14,6 +14,6 @@ USER build
 ADD build.sh /home/build
 
 WORKDIR /home/build
-RUN chmod +x build.sh
+RUN sudo chmod +x build.sh
 
 ENTRYPOINT ["/home/build/build.sh"]
