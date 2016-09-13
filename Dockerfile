@@ -11,9 +11,9 @@ RUN id build 2>/dev/null || useradd --uid 30000 --create-home build
 RUN echo "build ALL=(ALL) NOPASSWD: ALL" | tee -a /etc/sudoers
 
 USER build
-ADD build.sh /home/build
+ADD build.sh /home/build/poky
 
-WORKDIR /home/build
+WORKDIR /home/build/poky
 RUN sudo chmod +x build.sh
 
-ENTRYPOINT ["/home/build/build.sh"]
+ENTRYPOINT ["/home/build/poky/build.sh"]
