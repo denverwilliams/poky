@@ -19,4 +19,4 @@ build_yocto:
   script:
     - docker pull docker.ii.org.nz/iichip/poky:$CI_BUILD_REF_NAME
     - docker rm -f docker.ii.org.nz/iichip/poky:$CI_BUILD_REF_NAME || /bin/true
-    - docker run docker.ii.org.nz/iichip/poky:$CI_BUILD_REF_NAME
+    - docker run --volume /root/yocto:/home/build/poky docker.ii.org.nz/iichip/poky:$CI_BUILD_REF_NAME
