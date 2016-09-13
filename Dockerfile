@@ -13,6 +13,7 @@ RUN echo "build ALL=(ALL) NOPASSWD: ALL" | tee -a /etc/sudoers
 USER build
 ADD build.sh /home/build
 
+WORKDIR /home/build
 RUN chmod +x build.sh
 
 ENTRYPOINT ["/home/build/build.sh"]
