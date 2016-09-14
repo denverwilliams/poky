@@ -11,5 +11,5 @@ RUN id build 2>/dev/null || useradd --uid 30000 --create-home build
 RUN echo "build ALL=(ALL) NOPASSWD: ALL" | tee -a /etc/sudoers
 
 USER build
-RUN mkdir -p /builds/iichip/poky
+RUN sudo mkdir -p /builds/iichip/poky
 WORKDIR /build/iichip/poky
