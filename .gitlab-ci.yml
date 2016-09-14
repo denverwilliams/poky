@@ -17,7 +17,7 @@ poky:
   tags: 
     - yocto
   script:
-    - su build
+    - echo $HOME
     - ls -la
     - pwd
     - sleep 10
