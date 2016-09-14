@@ -25,7 +25,7 @@ poky:
     name:
       poky
     paths:
-      - /home/build/poky/
+      - poky/
   
 #build_yocto:
 #  stage: deploy
