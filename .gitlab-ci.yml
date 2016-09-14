@@ -12,7 +12,8 @@ build:
   - docker build -t docker.ii.org.nz/iichip/poky:$CI_BUILD_REF_NAME .
   - docker push docker.ii.org.nz/iichip/poky:$CI_BUILD_REF_NAME
 
-image: docker.ii.org.nz/iichip/poky:$CI_BUILD_REF_NAME
+#image: docker.ii.org.nz/iichip/poky:$CI_BUILD_REF_NAME
+image: ubuntu:latest
 poky:
   stage: build
   tags: 
