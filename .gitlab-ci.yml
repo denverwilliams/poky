@@ -17,12 +17,8 @@ poky:
   tags: 
     - yocto
   script:
-    - echo $HOME
-    - sudo apt-get update
-    - sudo apt-get -y install vim
-    - ls -la
+    - source oe-init-build-env build-chip
     - pwd
-    - sleep 10
   artifacts:
     name:
       poky
