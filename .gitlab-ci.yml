@@ -11,6 +11,21 @@ build:
   - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN docker.ii.org.nz
   - docker build -t docker.ii.org.nz/iichip/poky:$CI_BUILD_REF_NAME .
   - docker push docker.ii.org.nz/iichip/poky:$CI_BUILD_REF_NAME
+
+image: docker.ii.org.nz/iichip/poky:$CI_BUILD_REF_NAME
+poky:
+  stage: build
+  tags: 
+    - yocto
+  script:
+    - git clone -b chip-fido https://gitlab.ii.org.nz/iichip/poky.git
+    - ls -la
+    - sleep 10
+  artifacts:
+    name:
+      poky
+    paths:
+      - /home/build/poky
   
 #build_yocto:
 #  stage: deploy
