@@ -18,7 +18,7 @@ poky:
     - yocto
   script:
     - source oe-init-build-env build-chip
-    - pwd
+    - bitbake chip-hwup-image
   artifacts:
     name:
       poky
