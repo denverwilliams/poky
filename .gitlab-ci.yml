@@ -18,8 +18,8 @@ poky:
     - yocto
   script:
     - echo $HOME
-    - apt-get update
-    - apt-get -y install vim
+    - sudo apt-get update
+    - sudo apt-get -y install vim
     - ls -la
     - pwd
     - sleep 10
