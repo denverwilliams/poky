@@ -21,10 +21,6 @@ poky:
     - ls -la
     - pwd
     - sleep 10
-    - git clone -b chip-fido https://gitlab.ii.org.nz/iichip/poky.git
-    - ls -la
-    - sleep 10
-    - pwd
   artifacts:
     name:
       poky
