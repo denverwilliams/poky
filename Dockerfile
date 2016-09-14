@@ -13,9 +13,6 @@ RUN echo "build ALL=(ALL) NOPASSWD: ALL" | tee -a /etc/sudoers
 USER build
 WORKDIR /home/build
 RUN git clone --branch chip-fido https://gitlab.ii.org.nz/iichip/poky.git
-
 WORKDIR /home/build/poky
 
-RUN chmod +x build.sh
-
-ENTRYPOINT ["/home/build/poky/build.sh"]
+ENTRYPOINT ["/bin/bash"]
