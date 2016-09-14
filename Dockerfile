@@ -15,4 +15,4 @@ WORKDIR /home/build
 #RUN git clone --branch chip-fido https://gitlab.ii.org.nz/iichip/poky.git
 #WORKDIR /home/build/poky
 
-ENTRYPOINT ["/bin/bash"]
+#ENTRYPOINT ["/bin/bash"]
